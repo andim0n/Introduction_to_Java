@@ -1,6 +1,6 @@
 package basics_of_software_code_development.linear_programs;
 
-public class TaskThree {
+public class Task3 {
     public static void main(String[] args) {
         double x = 1;
         double y = 2;

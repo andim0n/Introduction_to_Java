@@ -2,7 +2,7 @@ package basics_of_software_code_development.linear_programs;
 
 import java.lang.Math;
 
-class TaskTwo {
+class Task2 {
     public static void main(String[] args) {
         double a = 1;
         double b = 2;

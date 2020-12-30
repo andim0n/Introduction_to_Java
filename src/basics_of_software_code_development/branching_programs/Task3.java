@@ -1,7 +1,7 @@
 package basics_of_software_code_development.branching_programs;
 
 public class Task3 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int x1 = -1;
         int y1 = -2;
 

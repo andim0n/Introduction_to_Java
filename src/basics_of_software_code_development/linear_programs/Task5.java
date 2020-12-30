@@ -2,8 +2,8 @@ package basics_of_software_code_development.linear_programs;
 
 import java.util.Calendar;
 
-public class TaskFive {
-    public static void main(String args[]) {
+public class Task5 {
+    public static void main(String[] args) {
         long t = System.currentTimeMillis();
         Calendar c = Calendar.getInstance();
         c.setTimeInMillis(t);

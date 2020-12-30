@@ -1,7 +1,7 @@
 package basics_of_software_code_development.branching_programs;
 
 public class Task1 {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int a = 40;
         int b = 50;
         int c = 180 - a - b;
