@@ -1,4 +1,4 @@
-package basics_of_software_code_development.linear_programs;
+package basics_of_software_code_development.linear;
 
 import java.lang.Math;
 

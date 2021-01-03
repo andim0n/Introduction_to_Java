@@ -1,4 +1,4 @@
-package basics_of_software_code_development.branching_programs;
+package basics_of_software_code_development.branch;
 
 public class Task1 {
     public static void main(String[] args) {
