@@ -15,7 +15,7 @@ public class Task7 {
             if (i > 0) {
                 for (int j = 2; j <= i; j++) {
                     if ((0 == (i % j)) && !(j == i)) {
-                        System.out.printf("%d / %d = 0\n", i, j);
+                        System.out.printf("%d / %d = %d\n", i, j, i/j);
                     }
                 }
             }
