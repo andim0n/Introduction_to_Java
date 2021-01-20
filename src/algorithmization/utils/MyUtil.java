@@ -22,11 +22,21 @@ public class MyUtil {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 array[i][j] = (int) (Math.random() * 10) + 1;
-                System.out.printf("[i:%d][j:%d] %d\t\t", i, j, array[i][j]);
+                System.out.printf("%d\t\t", array[i][j]);
             }
             System.out.printf("\n");
         }
         return array;
+    }
+
+    public static void printDoubleArray(int[][] array, int m, int n) {
+        System.out.printf("\n\n");
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.printf("%d\t\t", array[i][j]);
+            }
+            System.out.printf("\n");
+        }
     }
 
 }
