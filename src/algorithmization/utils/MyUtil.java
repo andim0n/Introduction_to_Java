@@ -5,7 +5,7 @@ public class MyUtil {
         int[] array = new int[n];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10) + 1;
-            System.out.printf("%d ", array[i]);
+//            System.out.printf("%d ", array[i]);
         }
         return array;
     }
@@ -17,10 +17,10 @@ public class MyUtil {
         }
     }
 
-    public static int[][] setDoubleArray(int n, int m) {
+    public static int[][] setDoubleArray(int m, int n) {
         int[][] array = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 array[i][j] = (int) (Math.random() * 10) + 1;
                 System.out.printf("%d\t\t", array[i][j]);
             }
