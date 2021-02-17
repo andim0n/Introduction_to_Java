@@ -11,7 +11,7 @@ public class MyUtil {
     }
 
     public static void printArray(int[] array) {
-        System.out.printf("\nArray:\n");
+        System.out.printf("\n");
         for (int a : array) {
             System.out.printf("%d ", a);
         }
