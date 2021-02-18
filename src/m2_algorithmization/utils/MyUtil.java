@@ -5,7 +5,7 @@ public class MyUtil {
         int[] array = new int[n];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 10) + 1;
-//            System.out.printf("%d ", array[i]);
+            System.out.printf("%d\t", array[i]);
         }
         return array;
     }
@@ -13,7 +13,7 @@ public class MyUtil {
     public static void printArray(int[] array) {
         System.out.printf("\n");
         for (int a : array) {
-            System.out.printf("%d ", a);
+            System.out.printf("%d\t", a);
         }
     }
 
@@ -41,8 +41,8 @@ public class MyUtil {
 
     public static void printMatrix(int[][] matrix) {
         System.out.printf("\n\n");
-        for (int i = 0; i < matrix[0].length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
                 System.out.printf("%d\t\t", matrix[i][j]);
             }
             System.out.printf("\n");
