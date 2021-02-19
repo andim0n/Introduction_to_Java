@@ -15,10 +15,9 @@ public class Task_8 {
 
         int[] d = {0, 1, 2, 3, 4, 5, 6, 7};
 
-        // todo
-        System.out.printf("D[1] + D[2] + D[3]=%d", sum(d, 1, 3));
-        System.out.printf("\nD[3] + D[4] + D[5]=%d", sum(d, 3, 5));
-        System.out.printf("\nD[4] + D[5] + D[6]=%d", sum(d, 3, 6));
+        System.out.println(sum(d, 1, 3));
+        System.out.println(sum(d, 3, 5));
+        System.out.println(sum(d, 4, 6));
 
     }
 

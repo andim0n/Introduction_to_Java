@@ -5,34 +5,30 @@ import m2_algorithmization.utils.MyUtil;
 import java.util.Random;
 
 public class Task14 {
+
     public static void main(String[] args) {
-        int m = 5;
-        int n = m;
-        int[][] matrix = new int[m][n];
+
+        int n = 10;
+        int[][] matrix = new int[n][n];
         int count = 0;
         Random rand = new Random();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < matrix.length; i++) {
+            count = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
 
-            for (int j = 0; j < m; j++) {
-//                int number = (int) Math.round(Math.random() * (i + 1));
-//                if ((count < i + 1) && (number >= 1)) {
-                // todo correct random
-                if ((count < i + 1) && (rand.nextBoolean()) && (matrix[j][i] != 1)) {
+                if ((count < i + 1) && (rand.nextBoolean())) {
                     matrix[j][i] = 1;
                     count++;
                 } else {
                     matrix[j][i] = 0;
                 }
             }
-            if (count == (i + 1)) {
-                count = 0;
-            } else {
+            if (count != (i + 1)) {
                 i--;
             }
 
         }
         MyUtil.printMatrix(matrix);
-
     }
 }
