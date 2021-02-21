@@ -17,56 +17,93 @@ public class Task_5 {
 
     public static void main(String[] args) {
 
-        int n = 0;
-        int[] a = {0, 1, 2, 3, 12, 13, 14, 15, 16, 17, 18, 19, 4, 5, 6, 7, 8, 9, 11};
-//        int[] b = new int[a.length];
-
-        // Найдем первый неупорядоченный элемент
-        for (int i = 0; i < a.length - 1; i++) {
-            if (a[i + 1] < a[i]) {
-                n = i + 1;
-                break;
-            }
-        }
-        System.out.println(n);
-
-//        System.out.println(binarySearch(a, 10, 0, a.length - 1));
-
-        int pos;
-        int tmp;
-
-        for (int i = n; i < a.length; i++) {
-
-            pos = binarySearch(a, a[i], 0, i - 1);
-            tmp = a[i];
-
-            for (int j = i; j > pos; j--) {
-
-                a[j] = a[j - 1];
-            }
-            a[i] = tmp;
-        }
+        int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8};
 
         MyUtil.printArray(a);
+//        System.out.println(isSorted(a));
+//        sort(a);
+//        MyUtil.printArray(a);
+        System.out.printf("\n%d", binarySearch(a, 8, findUnsorted(a) - 1));
+
 
     }
 
-    public static int binarySearch(int[] a, int key, int left, int right) {
+    static int[] insert(int[] a, int oldPos, int newPos) {
+        int tmp = a[oldPos];
+        for (int i = oldPos; i > newPos; i--) {
+            a[i] = a[i - 1];
+        }
+        a[newPos] = tmp;
+        return a;
+    }
 
-        int index = -1;
+    static void sort(int[] a) {
+
+        int oldPos;
+        int newPos;
+
+        while (!isSorted(a)) {
+            oldPos = findUnsorted(a);
+
+            for (int i = oldPos; i < a.length; i++) {
+                newPos = binarySearch(a, a[i], i - 1) + 1;
+                System.out.printf("\n[%d]%d >> [%d]", i, a[i], newPos);
+                a = insert(a, i, newPos);
+                MyUtil.printArray(a);
+            }
+        }
+    }
+
+    static int findUnsorted(int a[]) {
+
+        int unsortedIndex = -1;
+
+        for (int i = 1; i < a.length; i++) {
+
+            if (a[i] < a[i - 1]) {
+                unsortedIndex = i;
+                break;
+            }
+        }
+        return unsortedIndex;
+    }
+
+    static boolean isSorted(int array[]) {
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1])
+                return false;
+
+        }
+        return true;
+    }
+
+    public static int binarySearch(int[] a, int key, int right) {
+
+        int index = 0;
+        int left = 0;
+//        right--;
 
         while (left <= right) {
 
-            index = (right + left) / 2;
+            System.out.printf("\nfrom %d to %d", left, right);
 
-            if (key > a[index])
-                left = index + 1;
+            index = (right + left + 1) / 2;
 
-            if (key < a[index])
-                right = index - 1;
-
-            if (key == a[index])
+            if (key == a[index]) {
+                System.out.printf("\n%d = [%d]%d", key, index, a[index]);
                 break;
+            } else if (key < a[index]) {
+                System.out.printf("\n%d < [%d]%d", key, index, a[index]);
+                index--;
+                right = index;
+            }
+
+            if (key > a[index]) {
+                System.out.printf("\n%d > [%d]%d", key, index, a[index]);
+                index++;
+                left = index;
+            }
+
         }
 
         return index;
