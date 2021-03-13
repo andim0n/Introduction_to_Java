@@ -1,5 +1,5 @@
 package by.epam.java.module_2.package_3;
-// TODO binary search
+// TODO Java.util >> Arrays.class >> int binarySearch()
 /*
  *  5. Сортировка вставками.
  *  Дана последовательность чисел a1,a2,...,an.
@@ -20,10 +20,7 @@ public class Task_5 {
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8};
 
         MyUtil.printArray(a);
-//        System.out.println(isSorted(a));
-//        sort(a);
-//        MyUtil.printArray(a);
-        System.out.printf("\n%d", binarySearch(a, 8, findUnsorted(a) - 1));
+
 
 
     }
